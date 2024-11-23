@@ -1,4 +1,3 @@
-# Fiz usando apenas if e else mas tem uma resolução com dicionarios e laços de repetição no final :/
 
 def calcular_saque(valor):
     cedulas_100 = cedulas_50 = cedulas_20 = cedulas_10 = cedulas_5 = cedulas_2 = 0
@@ -87,39 +86,3 @@ if moedas_005 > 0:
     print(f"R$0.05: {moedas_005} moedas")
 if moedas_001 > 0:
     print(f"R$0.01: {moedas_001} moedas")
-'''
-def calcular_saque(valor):
-    cedulas = [100, 50, 20, 10, 5, 2]
-    moedas = [1, 0.50, 0.25, 0.10, 0.05, 0.01]
-
-    resultado_cedulas = {}
-    
-    for cedula in cedulas:
-        quantidade = int(valor // cedula)  
-        
-        if quantidade > 0:
-            resultado_cedulas[cedula] = quantidade
-            valor -= quantidade * cedula
-    
-    resultado_moedas = {}
-    for moeda in moedas:
-        quantidade = int(round(valor // moeda))  
-        if quantidade > 0:
-            resultado_moedas[moeda] = quantidade
-            valor -= quantidade * moeda  
-
-    return resultado_cedulas, resultado_moedas
-
-valor_saque = float(input("Digite o valor do saque: "))
-
-cedulas, moedas = calcular_saque(valor_saque)
-
-print("\nCédulas necessárias:")
-for cedula, quantidade in cedulas.items():
-    print(f"R${cedula:.2f}: {quantidade} cédulas")
-
-print("\nMoedas necessárias:")
-for moeda, quantidade in moedas.items():
-    print(f"R${moeda:.2f}: {quantidade} moedas")
-'''
-
