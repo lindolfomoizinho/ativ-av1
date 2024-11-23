@@ -1,20 +1,17 @@
-def soma_algarismos (numero):
-    unidade = numero % 10
-    numero //= 10
-    
-    dezena = numero % 10 
-    numero //= 10
-    
-    centena = numero % 10
-    numero //= 10
-
-    milhar = numero
-
-    print(f"A soma dos algarismos é: {unidade + dezena + centena + milhar}")
-
 valor = int(input("Digite um número: "))
 
-if valor >= 0 or valor <=9999:
-    print(soma_algarismos(valor))
+if 0 <= valor <= 9999:
+    unidade = valor % 10
+    valor //= 10
+
+    dezena = valor % 10
+    valor //= 10
+
+    centena = valor % 10
+    valor //= 10
+
+    milhar = valor
+
+    print(f"A soma dos algarismos é: {unidade + dezena + centena + milhar}")
 else:
     print("Digite um valor entre 0 e 9999")
